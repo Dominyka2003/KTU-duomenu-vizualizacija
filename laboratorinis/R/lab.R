@@ -3,7 +3,10 @@ library(dplyr)
 library(ggplot2)
 library(tidyverse)
 
-lab_sodra = read_csv("C:/Users/domju/OneDrive/Stalinis kompiuteris/2_semestras/P160B131 Programavimas duomenų tvarkymui ir vizualizavimui/R kalba/LD2/KTU-duomenu-vizualizacija/laboratorinis/data/lab_sodra.csv")
+#data from a personal computer
+#lab_sodra = read_csv("C:/Users/domju/OneDrive/Stalinis kompiuteris/2_semestras/P160B131 Programavimas duomenų tvarkymui ir vizualizavimui/R kalba/LD2/KTU-duomenu-vizualizacija/laboratorinis/data/lab_sodra.csv")
+
+lab_sodra = read_csv("../data/lab_sodra.csv")
 
 data = lab_sodra %>%
   filter(lab_sodra$ecoActCode == '467300')
@@ -17,7 +20,7 @@ data = data %>%
 
 summary(data)
 
-# First plot
+# First plot/task
 p1 = ggplot(data, aes(x = avgWage)) +
   geom_histogram(binwidth = 100, fill = "blue", color = "black") +
   labs(title = "Vidutinių atlyginimų histograma", x = "Vidutinis atlyginimas(avgWage)", y = "Dažnumas") +
@@ -47,7 +50,7 @@ top_5_companies = data %>%
 top_5_data = data %>%
   filter(name %in% top_5_companies$name)
 
-# Second plot
+# Second plot/task
 p2 = ggplot(top_5_data, aes(x = formatted_date, y = avgWage, group = name, color = name)) +
   geom_line(size = 1) +
   geom_point(size = 2.5) +
@@ -73,7 +76,7 @@ top_5_maxInsured = top_5_data %>%
   top_n(numInsured,n=1) %>% 
   distinct(name,numInsured)
 
-# Third plot 
+# Third plot/task 
 p3= ggplot(top_5_maxInsured, aes(x = (reorder(name,-numInsured)), y = numInsured, fill=name))+
   geom_col()+
   labs(title= "Apdraustųjų darbuotojų skaičius",
@@ -92,5 +95,3 @@ p3= ggplot(top_5_maxInsured, aes(x = (reorder(name,-numInsured)), y = numInsured
 
 print(p3)
 ggsave("../img/Rplot3(3uzd).png", p3, width = 10, height = 5, dpi = 200)
-
-
