@@ -3,9 +3,6 @@ library(dplyr)
 library(ggplot2)
 library(tidyverse)
 
-#data from a personal computer
-#lab_sodra = read_csv("C:/Users/domju/OneDrive/Stalinis kompiuteris/2_semestras/P160B131 Programavimas duomenų tvarkymui ir vizualizavimui/R kalba/LD2/KTU-duomenu-vizualizacija/laboratorinis/data/lab_sodra.csv")
-
 lab_sodra = read_csv("../data/lab_sodra.csv")
 
 data = lab_sodra %>%
