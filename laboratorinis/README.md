@@ -2,7 +2,7 @@
 
 | Variantas | ecoActCode |
 |------------- | ------------- |
-|20   | 11111111111 |
+| 7   |   467300    |
 
 test 
 
@@ -10,7 +10,7 @@ test
 
 Atsakymas:
 
-![histograma](img/pavyzdys1.png)
+![histograma](img/Rplot1(1uzd).png)
 
 Išvados:
 
@@ -18,16 +18,16 @@ Išvados:
 
 Atsakymas:
 
-![atlyginimai](img/pavyzdys2.png)
+![atlyginimai](img/Rplot2(2uzd).png)
 
-Išvados:
+Išvados: Kova, balandi ir lapkriti buvo padidejes vidutinis uzmokestis
 
 
 ### 3. Užduotis
 
 Atsakymas:
 
-![apdraustieji](img/pavyzdys3.png)
+![apdraustieji](img/Rplot3(3uzd).png)
 
 Išvados:
 
@@ -36,4 +36,6 @@ Išvados:
 
 Shiny R aplikacijos nuotrauka:
 
-![shiny app](img/shiny_example.png)
+![shiny app](img/app1.png)
+![shiny app](img/app2.png)
+![shiny app](img/app3.png)
